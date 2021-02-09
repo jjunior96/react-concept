@@ -1,15 +1,23 @@
 {
-  "name": "signup",
+  "name": "react-concept",
   "author": "Junior Alves <jjalves96@gmail.com>",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "test": "jest",
-    "lint": "eslint src --max-warnings=0",
-    "test:watch": "yarn test --watch"
+    "test:watch": "yarn test --watch",
+    "lint": "eslint src --max-warnings=0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*": ["yarn lint --fix", "yarn test --findRelatedTests --bail"]
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^4.1.1",
