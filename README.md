@@ -3,7 +3,6 @@
     <h3 align="center">Sign Up Page</h3>
     <p align="center">Demo<p/>
   </a>
-  <p align="center">Develop. Preview. Ship.</p>
 </p>
 
 <p float="left">
