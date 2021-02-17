@@ -1,5 +1,8 @@
+import { useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Form } from '@unform/web';
+import { FormHandles } from '@unform/core';
 
 import Button from 'components/Button';
 import Input from 'components/Input';
@@ -7,6 +10,12 @@ import Input from 'components/Input';
 import { Container, Content, Background } from './styles';
 
 const SignUp: React.FC = () => {
+  const formRef = useRef<FormHandles>(null);
+
+  const handleSubmit = () => {
+    console.log('');
+  };
+
   return (
     <Container>
       <Background>
@@ -16,7 +25,7 @@ const SignUp: React.FC = () => {
       </Background>
 
       <Content>
-        <form>
+        <Form onSubmit={handleSubmit} ref={formRef}>
           <h1>Sign Up</h1>
           <Input name="name" type="text" placeholder="Full Name" />
           <Input name="email" type="text" placeholder="Email Address" />
@@ -34,7 +43,7 @@ const SignUp: React.FC = () => {
           </span>
 
           <Button name="button">Get Starded</Button>
-        </form>
+        </Form>
 
         <span>
           Already a member?
