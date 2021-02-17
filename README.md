@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://jjunior-react.vercel.app/">
-    <h3 align="center">Sign Up Page</h3>
+    <h2 align="center">Sign Up Page</h2>
     <p align="center">Demo<p/>
   </a>
 </p>
